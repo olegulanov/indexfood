@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="logreg container">
+    <form method="post" class="reg-text">
+    {% csrf_token %}
+    {% for f in form %}
+        <p><label class="reg-text" for="{{ f.id_for_label }}">{{f.label}}: </label>{{ f }}</p>
+        <div class="errors_text">{{ f.errors }}</div>
+    {% endfor %}
+    <button type="submit" class="button button-primary">Регистрация</button>
+    </form>
+    <div class="reg-text-sec">
+        <h1 class="welcome-text">Добро пожаловать!</h3>
+        <p class="need-to-hide">Ты регистрируешься на нашем сайте, не забудь, что теперь твое имя принадлежит нам!</p>
+        <p class="need-to-hide">Все права защищены, будешь плохо себя вести, получишь бан!</p>
+    </div>
+
+</section> 
+{% endblock %}

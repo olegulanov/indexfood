@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="logreg container">
+    <form method="post" class="reg-text">
+    {% csrf_token %}
+    <div class="errors_text"> {{ form.non_field_errors }} </div>
+    {% for f in form %}
+        <p><label class="reg-text" for="{{ f.id_for_label }}">{{f.label}}: </label>{{ f }}</p>
+        <div class="form-error">{{ f.errors }}</div>
+    {% endfor %}
+    <button type="submit" class="button button-primary">Войти</button>
+    </form>
+</section> 
+{% endblock %}

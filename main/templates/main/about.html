@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+{% load my_tags %}
+{% load static %}
+
+
+{% block content %} 
+    <div class="maps container">
+        <div>
+            <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2239.9012435162635!2d37.42409215129426!3d55.847028392093215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b547ed30487c0d%3A0xd2ff10cf03c767ee!2z0KLRg9GA0LjRgdGC0YHQutCw0Y8g0YPQuy4sIDQg0LrQvtGA0L_Rg9GBIDUsINCc0L7RgdC60LLQsCwgMTI1NDU5!5e0!3m2!1sru!2sru!4v1635250147823!5m2!1sru!2sru" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div>
+            <p class="need-to-hide-about">Мы здесь: г.Москва, ул.Туристкая, д.4, корп 5.</p>
+            <p class="need-to-hide-about">Часы работы: пн-пт с 9:00 до 18:00</p>
+        </div>
+    </div>
+{% endblock %}
